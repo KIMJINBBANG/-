@@ -1,3 +1,5 @@
+from information import account
+
 while True:
     print("======Bank Menu======")
     print("1. 계좌개설")
@@ -16,12 +18,15 @@ while True:
         deposit = input("입금할 금액을 입력해주세요 :")
         print("##계좌개설을 완료하였습니다##")
         print("=====================")
-        continue
 
     if question == "2" :
         print("======입금하기======")
-        input("입금하실 계좌번호를 입력해주세요 : ")
-    
+        identify = input("입금하실 계좌번호를 입력해주세요 : ")
+        if identify == account :
+            print(name)
+            print(deposit)
+
+
     if question == "3" :
         print("======출금하기======")
     
@@ -33,6 +38,6 @@ while True:
     
     if question == "6" :
         print("======프로그램 종료======")
-    
+
     else :
         print("===잘못된 입력입니다.===")
