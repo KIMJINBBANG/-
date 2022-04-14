@@ -19,7 +19,7 @@ while True:
         print("##계좌개설을 완료하였습니다##")
         print("=====================")
 
-    if question == "2" :
+    elif question == "2" :
         print("======입금하기======")
         identify = input("입금하실 계좌번호를 입력해주세요 : ")
         if identify == account :
@@ -27,16 +27,16 @@ while True:
             print(deposit)
 
 
-    if question == "3" :
+    elif question == "3" :
         print("======출금하기======")
     
-    if question == "4" :
+    elif question == "4" :
         print("======전체조회======")
     
-    if question == "5" :
+    elif question == "5" :
         print("======계좌이체======")
     
-    if question == "6" :
+    elif question == "6" :
         print("======프로그램 종료======")
 
     else :
