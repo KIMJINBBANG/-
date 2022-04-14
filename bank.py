@@ -24,7 +24,7 @@ while True:
         identify = input("입금하실 계좌번호를 입력해주세요 : ")
         if identify == account :
             print(name)
-            print(first_deposit)
+            print(money)
             deposit = input("입금하실 금액을 입력해주세요 : ")
 
 
