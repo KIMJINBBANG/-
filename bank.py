@@ -15,7 +15,7 @@ while True:
         print("======계좌개설======")
         account = input("계좌번호를 입력해주세요 : ")
         name = input("이름을 입력해주세요 : ")
-        deposit = input("입금할 금액을 입력해주세요 :")
+        first_deposit = input("입금할 금액을 입력해주세요 :")
         print("##계좌개설을 완료하였습니다##")
         print("=====================")
 
@@ -24,7 +24,8 @@ while True:
         identify = input("입금하실 계좌번호를 입력해주세요 : ")
         if identify == account :
             print(name)
-            print(deposit)
+            print(first_deposit)
+            deposit = input("입금하실 금액을 입력해주세요 : ")
 
 
     if question == "3" :
