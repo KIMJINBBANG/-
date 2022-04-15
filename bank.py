@@ -34,6 +34,7 @@ while True:
             print()
             print("##계좌잔고 : ", total[identify].money, "원##")
             print("##입금이 완료되었습니다##")
+            print("=====================")
         
         else : 
           print("===잘못된 입력입니다.===")
@@ -49,6 +50,7 @@ while True:
             print()
             print("##계좌잔고 : ", total[identify].money, "원##")
             print("##출금이 완료되었습니다##")
+            print("=====================")
                     
         else : 
           print("===잘못된 입력입니다.===")
