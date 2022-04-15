@@ -59,7 +59,7 @@ while True:
     elif question == "4" :
         print("======전체조회======")
         for i in total:
-            print("계좌번호 : ", total[i].accountnumber, "/ 이름 :", total[i].name, "/ 잔액 : ", total[i].money)
+            print("계좌번호 : ", total[i].account, "/ 이름 :", total[i].name, "/ 잔액 : ", total[i].money)
 
     
     elif question == "5" :
