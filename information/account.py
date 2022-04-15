@@ -1,10 +1,11 @@
-class main_account :
-    def __init__(self, account = "", name = "", money = "") :
-        if account == "" :
-            self.account = account
-            self.account = name
-            self.money = int(money) + int(deposit)
-        else :
+class Main_account :
+    def __init__(self, account = "", name = "", money = 0) :
             self.account = account
             self.name = name
-            self.money = money
+            self.money = int(money)
+    
+    def deposit(self, charge) :
+        self.money = self.money + charge
+
+    def withdraw(self, withdrawal) :
+        self.money = self.money - withdrawal
