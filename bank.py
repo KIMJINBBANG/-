@@ -13,6 +13,7 @@ while True:
     print("6. 프로그램 종료")
     print("=====================")
     question = input("입력 : ")
+
     
     if question == "1" :
         print("======계좌개설======")
@@ -66,7 +67,10 @@ while True:
         print("======계좌이체======")
     
     elif question == "6" :
-        print("======프로그램 종료======")
+        break;
 
     else :
-        print("===잘못된 입력입니다.===")
+        print("===잘못된 입력입니다.===\n")
+
+
+print("##프로그램을 종료합니다.##")
