@@ -24,6 +24,11 @@ while True:
     if question == "1" :
         print("======계좌개설======")
         accountnumber = input("계좌번호를 입력해주세요 : ")
+        if accountnumber.isalpha() :
+            print("===잘못된 입력입니다.===")
+            continue
+        else :
+            pass
         if accountnumber in total :
             print("===이미 존재하는 계좌번호입니다.===")
             continue
