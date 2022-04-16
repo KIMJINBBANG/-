@@ -25,7 +25,7 @@ while True:
         print("======계좌개설======")
         accountnumber = input("계좌번호를 입력해주세요 : ")
         if accountnumber.isalpha() :
-            print("===잘못된 입력입니다.===")
+            print("===잘못된 입력입니다.===\n")
             continue
         else :
             pass
@@ -36,20 +36,20 @@ while True:
             pass
         name = input("이름을 입력해주세요 : ")
         if name.isdigit() :
-            print("===잘못된 입력입니다.===")
+            print("===잘못된 입력입니다.===\n")
             continue
         else :
             pass
         money = input("입금할 금액을 입력해주세요 :")
         if money.isalpha() :
-            print("===잘못된 입력입니다.===")
+            print("===잘못된 입력입니다.===\n")
             continue
         else :
             pass
         newaccount = account.Main_account(accountnumber, name, money)
         total[accountnumber] = newaccount
         print("##계좌개설을 완료하였습니다##")
-        print("=====================")
+        print("=====================\n")
 
     elif question == "2" :
         print("======입금하기======")
@@ -59,7 +59,7 @@ while True:
             print("계좌잔고 : ", total[identify].money, "원")            
             depositmoney = input("입금하실 금액을 입력해주세요 : ")
             if depositmoney.isalpha() :
-                print("===잘못된 입력입니다.===")
+                print("===잘못된 입력입니다.===\n")
                 continue
             else :
                 pass
@@ -67,10 +67,10 @@ while True:
             print()
             print("##계좌잔고 : ", total[identify].money, "원##")
             print("##입금이 완료되었습니다##")
-            print("=====================")
+            print("=====================\n")
         
         else : 
-          print("===잘못된 입력입니다.===")
+          print("===잘못된 입력입니다.===\n")
 
     elif question == "3" :
         print("======출금하기======")
@@ -80,7 +80,7 @@ while True:
             print("계좌잔고 : ", total[identify].money , "원")            
             withdrawmoney = input("출금하실 금액을 입력해주세요 : ")
             if withdrawmoney.isalpha() :
-                print("===잘못된 입력입니다.===")
+                print("===잘못된 입력입니다.===\n")
                 continue
             else :
                 pass
@@ -93,16 +93,16 @@ while True:
             print()
             print("##계좌잔고 : ", total[identify].money, "원##")
             print("##출금이 완료되었습니다##")
-            print("=====================")
+            print("=====================\n")
                     
         else : 
-          print("===잘못된 입력입니다.===")
+          print("===잘못된 입력입니다.===\n")
     
     elif question == "4" :
         print("======전체조회======")
         for i in total:
             print("계좌번호 : ", total[i].account, "/ 이름 :", total[i].name, "/ 잔액 : ", total[i].money, "원")
-        print("====================")
+        print("====================\n")
 
     
     elif question == "5" :
