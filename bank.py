@@ -15,7 +15,7 @@ while True:
     print("2. 입금하기")
     print("3. 출금하기")
     print("4. 전체조회")
-    print("5. 계좌이체")
+    print("5. 계좌삭제")
     print("6. 프로그램 종료")
     print("=====================")
     question = input("입력 : ")
@@ -106,7 +106,29 @@ while True:
 
     
     elif question == "5" :
-        print("======계좌이체======")
+        print("======계좌삭제======")
+        delete = input("삭제하실 계좌번호를 입력해주세요 : ")
+        if delete in total :
+            print("계좌이름 : ", total[delete].name)
+            print("계좌잔고 : ", total[delete].money, "원")            
+            if total[delete].money == 0 :                
+                del total[delete]
+                print("##계좌삭제가 완료되었습니다.##")
+            else :
+                print("계좌에 잔액이 남아있습니다. 계좌삭제를 계속 진행하시겠습니까?")
+                confirmation = input("Y/N : ")
+                if confirmation == "Y" or confirmation == "y" :
+                    del total[delete]
+                    print("##계좌삭제가 완료되었습니다.##")
+                elif confirmation == "N" or confirmation == "n" :
+                    continue
+                else :
+                    print("===잘못된 입력입니다.===\n")
+                    continue
+        
+        else : 
+          print("===잘못된 입력입니다.===\n")
+
     
     elif question == "6" :
         break;
