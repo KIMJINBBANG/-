@@ -108,7 +108,7 @@ while True:
             
             
         while (int(withdrawmoney) > int(total[identify].money)) :
-                print("\n* 잔액이 부족합니다. " + str(total[identify].money) + "원 이하의 금액을 입력해주세요. : \n")
+                print("\n* 잔액이 부족합니다. " + str(total[identify].money) + "원 이하의 금액을 입력해주세요. * \n")
                 withdrawmoney = input("입금할 금액을 입력해주세요 : ")
                 
            
