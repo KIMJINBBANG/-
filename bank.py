@@ -95,7 +95,7 @@ while True:
         identify = input("출금하실 계좌번호를 입력해주세요 : ")
 
         while (identify not in total):
-            print("\n존재하지 않는 계좌번호입니다. 다시 입력해주세요. : \n")
+            print("\n존재하지 않는 계좌번호입니다. 다시 입력해주세요.  \n")
             identify = input("입금하실 계좌번호를 입력해주세요 : ")
             
         
@@ -126,10 +126,11 @@ while True:
         
         for i in total:
             print("계좌번호 : ", total[i].account, "/ 이름 :", total[i].name, "/ 잔액 : ", total[i].money, "원")
-            print("====================\n")
+
+        print("====================\n")
 
         if (total=={}):
-            print("\n계좌가 존재하지 않습니다.\n")
+            print("계좌가 존재하지 않습니다.\n")
 
     
     elif question == "5" :
