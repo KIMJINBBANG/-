@@ -19,7 +19,7 @@ while True:
     print("2. 입금하기")
     print("3. 출금하기")
     print("4. 전체조회")
-    print("5. 계좌이체")
+    print("5. 계좌삭제")
     print("6. 프로그램 종료")
     print("=====================")
     question = input("입력 : ")
@@ -147,7 +147,7 @@ while True:
 
     
     elif question == "5" :
-        print("======계좌이체======")
+        print("\n 개인과제\n")
     
     elif question == "6" :
         break;
