@@ -199,7 +199,7 @@ while True:
         total[identify].money-=int(send_money)
         total[receiver].money+=int(send_money)
 
-        print("\n" + total[identify].name +"님의 계좌에서 " + str(send_money) + "원이 " + total[receiver].name + "님께 송금되었습니다.")
+        print("\n" + total[identify].name +"님의 계좌에서 " + str(send_money) + "원이 " + total[receiver].name + "님께 송금되었습니다.\n")
         
   
     
