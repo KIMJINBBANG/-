@@ -19,7 +19,7 @@ while True:
     print("2. 입금하기")
     print("3. 출금하기")
     print("4. 전체조회")
-    print("5. 계좌이체")
+    print("5. 송금하기")
     print("6. 프로그램 종료")
     print("=====================")
     question = input("입력 : ")
@@ -79,6 +79,11 @@ while True:
         while (identify not in total):
             print("\n존재하지 않는 계좌번호입니다. 다시 입력해주세요. \n")
             identify = input("입금하실 계좌번호를 입력해주세요 : ")
+
+            while (identify.isdigit()==False) :
+               print("\n* 잘못된 입력입니다. 다시 입력해주세요. *\n")
+               identify = input("입금할 금액을 입력해주세요 :")
+
             
         print("계좌이름 : ", total[identify].name)
         print("계좌잔고 : ", total[identify].money, "원")            
@@ -109,7 +114,11 @@ while True:
 
         while (identify not in total):
             print("\n존재하지 않는 계좌번호입니다. 다시 입력해주세요.  \n")
-            identify = input("입금하실 계좌번호를 입력해주세요 : ")
+            identify = input("출금하실 계좌번호를 입력해주세요 : ")
+
+            while (identify.isdigit()==False) :
+             print("\n* 잘못된 입력입니다. 다시 입력해주세요. *\n")
+             identify = input("출금하실 계좌번호를 입력해주세요 : ")
             
         
         print("계좌이름 : ", total[identify].name)
@@ -118,12 +127,18 @@ while True:
 
         while (withdrawmoney.isdigit()==False) :
              print("\n* 잘못된 입력입니다. 다시 입력해주세요. *\n")
-             withdrawmoney = input("입금할 금액을 입력해주세요 :")
+             withdrawmoney = input("출금할 금액을 입력해주세요 :")
             
             
         while (int(withdrawmoney) > int(total[identify].money)) :
                 print("\n* 잔액이 부족합니다. " + str(total[identify].money) + "원 이하의 금액을 입력해주세요. * \n")
-                withdrawmoney = input("입금할 금액을 입력해주세요 : ")
+                withdrawmoney = input("출금할 금액을 입력해주세요 : ")
+
+                while (withdrawmoney.isdigit()==False) :
+                  print("\n* 잘못된 입력입니다. 다시 입력해주세요. *\n")
+                  withdrawmoney = input("출금할 금액을 입력해주세요 :")
+            
+
                 
            
         total[identify].withdraw(int(withdrawmoney))
@@ -147,7 +162,46 @@ while True:
 
     
     elif question == "5" :
-        print("======계좌이체======")
+        print("======송금하기======")
+
+        if (total=={}):
+            print("\n계좌가 존재하지 않습니다.\n")
+            continue
+
+
+        identify=input("본인의 계좌를 입력하세요. :")
+
+        while (identify not in total):
+            print("\n존재하지 않는 계좌번호입니다. 다시 입력해주세요. \n")
+            identify = input("입금하실 계좌번호를 입력해주세요 : ")
+
+            while (identify.isdigit()==False) :
+               print("\n* 잘못된 입력입니다. 다시 입력해주세요. *\n")
+               identify = input("입금할 금액을 입력해주세요 :")
+
+        receiver=input("송금할 계좌를 입력하세요. :")
+
+        while (receiver not in total):
+            print("\n존재하지 않는 계좌번호입니다. 다시 입력해주세요. \n")
+            receiver=input("송금할 계좌를 입력하세요 :")
+
+            while (receiver.isdigit()==False) :
+               print("\n* 잘못된 입력입니다. 다시 입력해주세요. *\n")
+               receiver=input("송금할 계좌를 입력하세요 :")
+
+        send_money=input("송금할 금액을 입력하세요. :")
+
+        while (send_money.isdigit()==False) :
+               print("\n* 잘못된 입력입니다. 다시 입력해주세요. *\n")
+               send_money=input("송금할 금액을 입력하세요 :")
+
+
+        total[identify].money-=int(send_money)
+        total[receiver].money+=int(send_money)
+
+        print("\n" + total[identify].name +"님의 계좌에서 " + str(send_money) + "원이 " + total[receiver].name + "님께 송금되었습니다.")
+        
+  
     
     elif question == "6" :
         break;
